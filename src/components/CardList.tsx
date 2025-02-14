@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useMemo } from 'react';
 import { articles } from '../data/articles';
 
-const LazyCard = lazy(() => import('./Card'));
+const LazyCard = lazy(() => import('./card'));
 
 type CardListProps = {
   visibleItems: number;
