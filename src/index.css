@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_18pt-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/fonts/Inter_18pt-Regular.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_18pt-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+@theme {
+  --font-main: 'Inter', sans-serif;
+  --color-accent: rgb(255, 99, 71);
+  --color-primary: rgb(30, 58, 138);
+  --color-overlay: rgba(0, 0, 0, 0.2);
+  --color-primary-light: rgb(41,78,186);
+  --color-primary-dark: rgb(19, 38, 90);
+  --color-background: rgb(255, 255, 255);
+  --color-secondary: rgb(0, 0, 0);
+  --color-button-text: rgb(255, 255, 255);
+  --color-hover: rgb(30, 58, 138);
+  --color-accent-heading: rgb(30, 58, 138);
+  --color-theme-hover: rgb(255, 99, 71);
+  --color-loader: rgb(41,78,186);
+}
+
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+:root {
+  --font-main: 'Inter', sans-serif;
+  --color-accent: rgb(255, 99, 71);
+  --color-primary: rgb(30, 58, 138);
+  --color-overlay: rgba(0, 0, 0, 0.2);
+  --color-primary-light: rgb(41,78,186);
+  --color-primary-dark: rgb(19, 38, 90);
+  --color-background: rgb(255, 255, 255);
+  --color-secondary: rgb(0, 0, 0);
+  --color-button-text: rgb(255, 255, 255);
+  --color-hover: rgb(30, 58, 138);
+  --color-accent-heading: rgb(30, 58, 138);
+  --color-theme-hover: rgb(255, 99, 71);
+  --color-loader: rgb(41,78,186);
+  color: var(--color-secondary);
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  background-color: var(--color-background);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark  {
+  --font-main: 'Inter', sans-serif;
+  --color-accent: rgb(255,82,51);
+  --color-primary: rgb(240, 246, 252);
+  --color-overlay: rgb(240, 246, 252, 0.2);
+  --color-primary-light: rgb(255,82,51);
+  --color-primary-dark: rgb(34, 34, 34);
+  --color-background: rgb(34, 34, 34);
+  --color-secondary: rgb(240, 246, 252);
+  --color-button-text: rgb(240, 246, 252);
+  --color-hover: rgb(255,49,12);
+  --color-accent-heading: rgb(255,82,51);
+  --color-theme-hover: rgb(240, 246, 252);
+  --color-loader: rgb(255, 99, 71);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  @theme {
+    --font-main: 'Inter', sans-serif;
+    --color-accent: rgb(255,82,51);
+    --color-primary: rgb(240, 246, 252);
+    --color-overlay: rgb(240, 246, 252, 0.2);
+    --color-primary-light: rgb(255,82,51);
+    --color-primary-dark: rgb(34, 34, 34);
+    --color-background: rgb(34, 34, 34);
+    --color-secondary: rgb(240, 246, 252);
+    --color-button-text: rgb(240, 246, 252);
+    --color-hover: rgb(255,49,12);
+    --color-accent-heading: rgb(255,82,51);
+    --color-theme-hover: rgb(240, 246, 252);
+    --color-loader: rgb(255, 99, 71);
+  }
+}
