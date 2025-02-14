@@ -64,7 +64,7 @@ const Modal: React.FC<TModalProps> = ({ onClose, children, title }) => {
       ref={overlayRef}
       className="fixed inset-0 bg-overlay flex items-center justify-center h-screen w-screen z-50"
     >
-      <div className="bg-background p-6 rounded-lg shadow-lg max-w-md w-full relative mx-2">
+      <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative mx-2">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-primary hover:text-primary cursor-pointer "
