@@ -1,10 +1,4 @@
-import {
-  Link,
-  Route,
-  Routes,
-  useLocation,
-  useNavigate,
-} from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 import Header from './components/header/Header';
 import Footer from './components/footer';
@@ -14,13 +8,13 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { Article } from './components/article';
-// import SubscribeForm from './components/auth/SubscribeForm';
+import SubscribeForm from './components/auth/SubscribeForm';
 import Modal from './components/common/Modal';
 
 import './App.css';
 
 import { BASE_PATH } from './data/config';
-import { YandexForm } from './components/YandexForm';
+// import { YandexForm } from './components/YandexForm';
 
 const App = () => {
   const navigate = useNavigate();
@@ -45,21 +39,12 @@ const App = () => {
           />
           <Route
             path={`${BASE_PATH}registration`}
-            // element={<SubscribeForm onSuccess={handleCloseModal} />}
-            element={
-              <Modal title={'Регистрация'} onClose={handleCloseModal}>
-                <YandexForm />
-                <p className="text-sm text-gray-800 text-center">
-                  Нажимая на кнопку, вы соглашаетесь с{' '}
-                  <Link
-                    to={`${BASE_PATH}privacy-policy`}
-                    className="text-blue-600 hover:underline"
-                  >
-                    Политикой конфиденциальности
-                  </Link>
-                </p>
-              </Modal>
-            }
+            element={<SubscribeForm onSuccess={handleCloseModal} />}
+            // element={
+            //   <Modal title={'Регистрация'} onClose={handleCloseModal}>
+            //     <SubscribeForm onSuccess={handleCloseModal} />
+            //   </Modal>
+            // }
           />
           <Route
             path={`${BASE_PATH}privacy-policy`}
@@ -73,17 +58,7 @@ const App = () => {
               path={`${BASE_PATH}registration`}
               element={
                 <Modal title={'Регистрация'} onClose={handleCloseModal}>
-                  {/* <SubscribeForm onSuccess={handleCloseModal} /> */}
-                  <YandexForm />
-                  <p className="text-sm text-gray-800 text-center">
-                    Нажимая на кнопку, вы соглашаетесь с{' '}
-                    <Link
-                      to={`${BASE_PATH}privacy-policy`}
-                      className="text-blue-600 hover:underline"
-                    >
-                      Политикой конфиденциальности
-                    </Link>
-                  </p>
+                  <SubscribeForm onSuccess={handleCloseModal} />
                 </Modal>
               }
             />
